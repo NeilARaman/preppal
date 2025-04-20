@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Step = ({ number, title, description, isReversed = false }: {
   number: string;
   title: string;

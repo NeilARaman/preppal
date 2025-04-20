@@ -1,5 +1,4 @@
-import React from 'react';
-import { ArrowRight, Check, Sparkles } from 'lucide-react';
+import { Check, Sparkles } from 'lucide-react';
 
 const benefits = [
   'No credit card required',

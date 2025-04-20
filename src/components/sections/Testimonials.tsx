@@ -1,5 +1,3 @@
-import React from 'react';
-
 const StarRating = ({ rating }: { rating: number }) => (
   <div className="flex gap-1">
     {[...Array(5)].map((_, i) => (

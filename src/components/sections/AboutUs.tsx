@@ -1,4 +1,3 @@
-import React from 'react';
 import { Target, Lightbulb, Users, ArrowRight } from 'lucide-react';
 
 export const AboutUs = () => {

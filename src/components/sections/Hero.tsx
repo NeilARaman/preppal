@@ -1,6 +1,6 @@
 'use client';
 
-import { Check, Sparkles } from 'lucide-react';
+import { Check, Sparkles, ArrowRight } from 'lucide-react';
 import { useState } from 'react';
 
 const benefits = [
@@ -55,7 +55,7 @@ export const Hero = () => {
                 className="btn-primary flex items-center gap-2 relative"
               >
                 Get Started
-                <span aria-hidden="true">→</span>
+                <ArrowRight className="w-5 h-5" />
               </button>
               <button
                 type="button"

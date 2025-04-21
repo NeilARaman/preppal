@@ -1,4 +1,7 @@
+'use client';
+
 import { Check, Sparkles } from 'lucide-react';
+import { useState } from 'react';
 
 const benefits = [
   'No credit card required',
@@ -7,6 +10,22 @@ const benefits = [
 ];
 
 export const Hero = () => {
+  const handleGetStarted = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const element = document.getElementById('get-started-section');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleHowItWorks = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const element = document.getElementById('how-it-works');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative overflow-hidden">
       {/* Background gradient */}
@@ -15,11 +34,11 @@ export const Hero = () => {
       <div className="container max-w-7xl mx-auto px-6 pt-16 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text & CTA */}
-          <div>
+          <div className="relative z-10">
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
-              Revolutionize<br />
-              Your{' '}
-              <span className="text-blue-500">
+              <span className="text-gray-900">Revolutionize</span><br />
+              <span className="text-gray-900">Your</span>{' '}
+              <span className="text-primary-500">
                 Teaching<br />
                 Materials
               </span>
@@ -29,23 +48,25 @@ export const Hero = () => {
               PrepPal uses AI to help educators create high-quality, personalized teaching materials in minutes, not hours.
             </p>
 
-            <div className="flex flex-wrap gap-4 mt-8">
-              <a
-                href="/get-started"
-                className="btn-primary flex items-center gap-2"
+            <div className="flex flex-wrap gap-4 mt-8 relative z-20">
+              <button
+                type="button"
+                onClick={handleGetStarted}
+                className="btn-primary flex items-center gap-2 relative"
               >
-                Get Started Free
+                Get Started
                 <span aria-hidden="true">→</span>
-              </a>
-              <a
-                href="#how-it-works"
-                className="btn-outline"
+              </button>
+              <button
+                type="button"
+                onClick={handleHowItWorks}
+                className="btn-outline relative"
               >
                 See How It Works
-              </a>
+              </button>
             </div>
 
-            <div className="mt-8 space-y-3">
+            <div className="mt-8 space-y-3 relative z-10">
               {benefits.map((benefit) => (
                 <div key={benefit} className="flex items-center gap-2 text-sm text-gray-600">
                   <Check className="w-5 h-5 text-green-500" />

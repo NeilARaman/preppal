@@ -5,67 +5,89 @@ const Step = ({ number, title, description, isReversed = false }: {
   isReversed?: boolean;
 }) => {
   const content = (
-    <div className="lg:w-1/2 p-6 lg:p-12">
-      <div className="text-primary-500 font-semibold mb-2">{number}</div>
-      <h3 className="text-2xl font-bold mb-4">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+    <div className="lg:w-1/2 p-6 lg:p-12 flex flex-col justify-center">
+      <div className="flex items-center mb-4">
+        <div className="bg-primary-100 text-primary-600 font-semibold rounded-full w-12 h-12 flex items-center justify-center mr-4">
+          {number}
+        </div>
+        <h3 className="text-2xl md:text-3xl font-bold">{title}</h3>
+      </div>
+      <p className="text-gray-600 text-lg leading-relaxed max-w-xl">{description}</p>
     </div>
   );
 
   const mockup = (
-    <div className="lg:w-1/2 p-6 lg:p-12">
-      <div className={`aspect-square rounded-2xl shadow-lg ${
-        number === '01' ? 'bg-blue-50' :
-        number === '02' ? 'bg-purple-50' :
-        number === '03' ? 'bg-green-50' :
-        'bg-yellow-50'
-      }`}>
-        {/* Placeholder for mockup content */}
-        <div className="w-full h-full flex items-center justify-center p-8">
-          <div className="w-full max-w-sm bg-white rounded-xl shadow-md p-6">
-            <div className="space-y-4">
-              <div className="h-4 bg-gray-200 rounded w-3/4" />
-              <div className="h-4 bg-gray-200 rounded w-1/2" />
-              <div className="h-4 bg-gray-200 rounded w-5/6" />
-              <div className="h-4 bg-gray-200 rounded w-2/3" />
+    <div className={`lg:w-1/2 ${['02', '03', '04'].includes(number) ? 'p-0' : 'p-6 lg:p-12'}`}>
+      <div className={`transform hover:scale-105 transition-transform duration-300 ${['02', '03', '04'].includes(number) ? '' : 'p-0'}`}>
+        {number === '01' ? (
+          <div className="rounded-2xl shadow-xl overflow-hidden bg-white">
+            <img
+              src="/Input-Requirements.jpg"
+              alt="Input Requirements Interface"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        ) : number === '02' ? (
+          <div className="flex justify-center">
+            <div className="rounded-2xl overflow-hidden w-3/4">
+              <img
+                src="/AI-Generated-Image.jpg"
+                alt="AI Generated Materials"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
-        </div>
+        ) : number === '03' ? (
+          <div className="flex justify-center">
+            <div className="rounded-2xl overflow-hidden w-3/4">
+              <img
+                src="/Image-Customization.jpg"
+                alt="Customize Teaching Materials"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        ) : (
+          <div className="flex justify-center">
+            <div className="rounded-2xl overflow-hidden w-3/4 bg-white">
+              <div className="aspect-[4/5] relative">
+                <img
+                  src="/Export-and-Share.jpg"
+                  alt="Export and Share Materials"
+                  className="absolute inset-0 w-full h-full object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
 
   return (
-    <div className="flex flex-col lg:flex-row items-center">
-      {isReversed ? (
-        <>
-          {mockup}
-          {content}
-        </>
-      ) : (
-        <>
-          {content}
-          {mockup}
-        </>
-      )}
+    <div className={`flex flex-col lg:flex-row items-center ${
+      isReversed ? 'lg:flex-row-reverse' : ''
+    } hover:bg-gray-50/50 rounded-3xl transition-colors duration-300`}>
+      {content}
+      {mockup}
     </div>
   );
 };
 
 export const HowItWorks = () => {
   return (
-    <section id="how-it-works" className="py-20">
+    <section id="how-it-works" className="py-24 bg-gradient-to-b from-white to-gray-50">
       <div className="container">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl font-bold mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent">
             How PrepPal Works
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-600 leading-relaxed">
             Creating professional teaching materials has never been easier. Follow these simple steps to transform your classroom experience.
           </p>
         </div>
 
-        <div className="space-y-16">
+        <div className="space-y-20">
           <Step
             number="01"
             title="Input Your Requirements"

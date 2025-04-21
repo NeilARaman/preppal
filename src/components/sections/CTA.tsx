@@ -18,7 +18,7 @@ export const CTA = () => {
   };
 
   return (
-    <section className="py-20 bg-primary-500">
+    <section id="get-started-section" className="py-20 bg-primary-500">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column */}
@@ -40,7 +40,7 @@ export const CTA = () => {
           </div>
 
           {/* Right Column - Signup Card */}
-          <div className="bg-white rounded-xl shadow-xl p-8">
+          <div className="bg-white rounded-xl p-8 shadow-xl">
             <div className="max-w-md mx-auto">
               <h3 className="text-2xl font-bold mb-2">Get Started Now</h3>
               <p className="text-gray-600 mb-6">
@@ -69,22 +69,10 @@ export const CTA = () => {
                   className="w-full btn-primary flex items-center justify-center"
                 >
                   Get Started
-                  <svg
-                    className="ml-2 h-5 w-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 7l5 5m0 0l-5 5m5-5H6"
-                    />
-                  </svg>
+                  <span aria-hidden="true" className="ml-2">→</span>
                 </button>
 
-                <p className="text-sm text-gray-500 text-center">
+                <p className="text-sm text-gray-500 text-center mt-4">
                   By signing up, you agree to our{' '}
                   <a href="/terms" className="text-primary-600 hover:text-primary-700">
                     Terms

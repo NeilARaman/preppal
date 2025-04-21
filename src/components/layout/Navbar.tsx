@@ -18,6 +18,7 @@ export const Navbar = () => {
           <div className="hidden md:flex md:items-center md:space-x-8">
             <a href="#features" className="text-gray-600 hover:text-gray-900">Features</a>
             <a href="#how-it-works" className="text-gray-600 hover:text-gray-900">How It Works</a>
+            <a href="#teaching-experience" className="text-gray-600 hover:text-gray-900">Teaching Experience</a>
             <a href="#testimonials" className="text-gray-600 hover:text-gray-900">Testimonials</a>
             <a href="/login" className="btn-outline">Log In</a>
             <a href="/get-started" className="btn-primary">Get Started</a>
@@ -42,6 +43,7 @@ export const Navbar = () => {
           <div className="md:hidden py-4 space-y-4">
             <a href="#features" className="block px-4 py-2 text-gray-600 hover:text-gray-900">Features</a>
             <a href="#how-it-works" className="block px-4 py-2 text-gray-600 hover:text-gray-900">How It Works</a>
+            <a href="#teaching-experience" className="block px-4 py-2 text-gray-600 hover:text-gray-900">Teaching Experience</a>
             <a href="#testimonials" className="block px-4 py-2 text-gray-600 hover:text-gray-900">Testimonials</a>
             <div className="px-4 pt-4 space-y-2">
               <a href="/login" className="block w-full btn-outline text-center">Log In</a>

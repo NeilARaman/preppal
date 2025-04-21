@@ -9,6 +9,7 @@ import { OurTeam } from './components/sections/OurTeam';
 import { AboutUs } from './components/sections/AboutUs';
 import { TeachingExperience } from './components/sections/TeachingExperience';
 import { ContactForm } from './components/sections/ContactForm';
+import { References } from './components/sections/References';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Testimonials />
         <CTA />
         <ContactForm />
+        <References />
       </main>
       <Footer />
     </div>

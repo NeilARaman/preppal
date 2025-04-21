@@ -5,8 +5,8 @@ interface Reference {
   year: string;
   title: string;
   source: string;
-  url: string;
   doi?: string;
+  url: string;
 }
 
 const references: Reference[] = [
@@ -66,12 +66,7 @@ export const References: React.FC = () => {
                   key={index} 
                   className="group p-6 transition-colors hover:bg-gray-50 first:rounded-t-2xl last:rounded-b-2xl"
                 >
-                  <a
-                    href={ref.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block space-y-2"
-                  >
+                  <div className="space-y-2">
                     <div className="flex items-baseline justify-between">
                       <p className="text-lg font-medium text-gray-900">
                         {ref.authors}
@@ -79,22 +74,31 @@ export const References: React.FC = () => {
                       <span className="text-gray-500">({ref.year})</span>
                     </div>
                     
-                    <p className="text-gray-900 font-medium">
+                    <p className="text-gray-900">
                       {ref.title}.{' '}
                       <span className="italic">{ref.source}</span>.
                     </p>
                     
-                    <div className="flex items-center space-x-2 text-sm">
-                      {ref.doi && (
-                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                          DOI: {ref.doi}
-                        </span>
-                      )}
-                      <span className="text-blue-600 group-hover:underline text-sm">
+                    {ref.doi ? (
+                      <a
+                        href={ref.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-sm text-blue-600 hover:underline"
+                      >
+                        https://doi.org/{ref.doi}
+                      </a>
+                    ) : (
+                      <a
+                        href={ref.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-sm text-blue-600 hover:underline"
+                      >
                         {ref.url}
-                      </span>
-                    </div>
-                  </a>
+                      </a>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>

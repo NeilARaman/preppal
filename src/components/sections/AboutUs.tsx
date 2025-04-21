@@ -88,7 +88,7 @@ export const AboutUs = () => {
             </div>
 
             <a 
-              href="https://docs.google.com/document/d/1jqxt0VbkY3djckgSZEp9J0-R9hWc1OSb32-EgE7qux0/edit?usp=sharing"
+              href="/PrepPal - Business Plan.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-10 inline-flex items-center text-primary-50 hover:text-white transition-colors group cursor-pointer"

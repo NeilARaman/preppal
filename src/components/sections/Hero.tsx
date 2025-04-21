@@ -1,7 +1,6 @@
 'use client';
 
 import { Check, Sparkles, ArrowRight } from 'lucide-react';
-import { useState } from 'react';
 
 const benefits = [
   'No credit card required',

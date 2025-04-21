@@ -24,7 +24,13 @@ const Step = ({ number, title, description, isReversed = false }: {
             <img
               src="/Input-Requirements.jpg"
               alt="Input Requirements Interface"
+              loading="lazy"
               className="w-full h-full object-cover"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.onerror = null;
+                target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMjJDNi40NzcgMjIgMiAxNy41MjMgMiAxMlM2LjQ3NyAyIDEyIDJzMTAgNC40NzcgMTAgMTAtNC40NzcgMTAtMTAgMTB6bTAtMmE4IDggMCAxIDAgMC0xNiA4IDggMCAwIDAgMCAxNnptMC0xNGE2IDYgMCAxIDEgMCAxMiA2IDYgMCAwIDEgMC0xMnptMCAyYTQgNCAwIDEgMCAwIDggNCA0IDAgMCAwIDAtOHoiIGZpbGw9ImN1cnJlbnRDb2xvciIvPjwvc3ZnPg==';
+              }}
             />
           </div>
         ) : number === '02' ? (
@@ -33,7 +39,13 @@ const Step = ({ number, title, description, isReversed = false }: {
               <img
                 src="/AI-Generated-Image.jpg"
                 alt="AI Generated Materials"
+                loading="lazy"
                 className="w-full h-full object-cover"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.onerror = null;
+                  target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMjJDNi40NzcgMjIgMiAxNy41MjMgMiAxMlM2LjQ3NyAyIDEyIDJzMTAgNC40NzcgMTAgMTAtNC40NzcgMTAtMTAgMTB6bTAtMmE4IDggMCAxIDAgMC0xNiA4IDggMCAwIDAgMCAxNnptMC0xNGE2IDYgMCAxIDEgMCAxMiA2IDYgMCAwIDEgMC0xMnptMCAyYTQgNCAwIDEgMCAwIDggNCA0IDAgMCAwIDAtOHoiIGZpbGw9ImN1cnJlbnRDb2xvciIvPjwvc3ZnPg==';
+                }}
               />
             </div>
           </div>
@@ -43,7 +55,13 @@ const Step = ({ number, title, description, isReversed = false }: {
               <img
                 src="/Image-Customization.jpg"
                 alt="Customize Teaching Materials"
+                loading="lazy"
                 className="w-full h-full object-cover"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.onerror = null;
+                  target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMjJDNi40NzcgMjIgMiAxNy41MjMgMiAxMlM2LjQ3NyAyIDEyIDJzMTAgNC40NzcgMTAgMTAtNC40NzcgMTAtMTAgMTB6bTAtMmE4IDggMCAxIDAgMC0xNiA4IDggMCAwIDAgMCAxNnptMC0xNGE2IDYgMCAxIDEgMCAxMiA2IDYgMCAwIDEgMC0xMnptMCAyYTQgNCAwIDEgMCAwIDggNCA0IDAgMCAwIDAtOHoiIGZpbGw9ImN1cnJlbnRDb2xvciIvPjwvc3ZnPg==';
+                }}
               />
             </div>
           </div>
@@ -54,7 +72,13 @@ const Step = ({ number, title, description, isReversed = false }: {
                 <img
                   src="/Export-and-Share.jpg"
                   alt="Export and Share Materials"
+                  loading="lazy"
                   className="absolute inset-0 w-full h-full object-contain"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null;
+                    target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMjJDNi40NzcgMjIgMiAxNy41MjMgMiAxMlM2LjQ3NyAyIDEyIDJzMTAgNC40NzcgMTAgMTAtNC40NzcgMTAtMTAgMTB6bTAtMmE4IDggMCAxIDAgMC0xNiA4IDggMCAwIDAgMCAxNnptMC0xNGE2IDYgMCAxIDEgMCAxMiA2IDYgMCAwIDEgMC0xMnptMCAyYTQgNCAwIDEgMCAwIDggNCA0IDAgMCAwIDAtOHoiIGZpbGw9ImN1cnJlbnRDb2xvciIvPjwvc3ZnPg==';
+                  }}
                 />
               </div>
             </div>

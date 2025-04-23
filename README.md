@@ -68,7 +68,7 @@ preppal/
 
 ## Contributing
 
-We welcome contributions! Please feel free to submit a Pull Request.
+Contributions are always welcome! Please feel free to submit a Pull Request.
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)

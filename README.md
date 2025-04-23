@@ -79,9 +79,3 @@ We welcome contributions! Please feel free to submit a Pull Request.
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-NeilARaman on GitHub, Neil Raman on LinkedIn
-
-Project Link: [https://github.com/NeilARaman/preppal](https://github.com/NeilARaman/preppal) 
